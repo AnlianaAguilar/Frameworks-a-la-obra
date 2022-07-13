@@ -13,6 +13,7 @@ const routes = [
   },
   {
     path: '/table',
+    name:'table',
     component: TableView
   },
   {
