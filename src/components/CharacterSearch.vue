@@ -2,7 +2,7 @@
   <v-container>
     <h1 align="center">Buscar Personaje</h1>
     <v-row justify="center" align="center">
-      <v-col cols="6" md="5">
+      <v-col cols="6" sm="4" md="5">
         <v-text-field
           label="Nombre:"
           placeholder="Ingrese nombre de Pokemon"
@@ -10,13 +10,14 @@
           v-model="character"
         ></v-text-field>
       </v-col>
-      <v-col cols="4" md="1">
+      <v-col cols="4" sm="2" md="1">
         <v-btn elevation="2" @click="searchPokemon">Buscar</v-btn>
       </v-col>
     </v-row>
     <v-row>
       <v-col
         cols="12"
+        sm="6"
         md="4"
         v-for="pokemonCharacter in pokemons"
         :key="pokemonCharacter.id"
@@ -27,7 +28,7 @@
 
           <!-- modal -->
           <div class="text-center">
-            <v-dialog v-model="dialog" width="500">
+            <v-dialog v-model="dialog" width="50%">
               <template v-slot:activator="{ on, attrs }">
                 <v-btn color="grey darken-3  text-uppercase mb-3" dark v-bind="attrs" v-on="on">
                   Ver mas
@@ -99,7 +100,6 @@ export default {
     setPokemon(pokemonData) {
       this.pokemon.name = pokemonData.name;
       this.pokemon.imagen = pokemonData.sprites.front_default;
-      this.pokemon.back_default = pokemonData.sprites.back_default;
       this.pokemon.back_shiny = pokemonData.sprites.back_shiny;
       this.pokemon.front_shiny = pokemonData.sprites.front_shiny;
       console.log(this.pokemon);
