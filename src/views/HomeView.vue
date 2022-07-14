@@ -1,15 +1,14 @@
 <template>
-  <hello-world />
+  <characters-list></characters-list>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
-
+  import CharactersList from '@/components/CharactersList.vue'
   export default {
     name: 'Home-view',
 
     components: {
-      HelloWorld,
+      CharactersList
     },
   }
 </script>

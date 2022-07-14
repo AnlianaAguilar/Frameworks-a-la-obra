@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import TableView from '@/views/TableView.vue'
+import CharacterSearchView from '@/views/CharacterSearchView.vue'
 
 Vue.use(VueRouter)
 
@@ -10,6 +11,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/CharacterSearch',
+    name:'CharacterSearch',
+    component: CharacterSearchView
   },
   {
     path: '/table',

@@ -16,7 +16,7 @@
             v-for="route in routes"
             :key="route.name"
             @click="redirectTo(route.name)"
-            :disabled="currentRoute==route.name"
+            :disabled="currentRoute == route.name"
           >
             <v-list-item-icon>
               <v-icon>{{ route.icon }}</v-icon>
@@ -52,6 +52,11 @@ export default {
           name: "home",
         },
         {
+          icon: "mdi-magnify",
+          title: "Busqueda",
+          name: "CharacterSearch",
+        },
+        {
           icon: "mdi-table-large-plus",
           title: "Tabla",
           name: "table",
@@ -60,14 +65,14 @@ export default {
     };
   },
   computed: {
-      currentRoute(){
-        return this.$route.name
-      }
+    currentRoute() {
+      return this.$route.name;
+    },
   },
   methods: {
     redirectTo(nameRoute) {
       //con el metodo se programa la redireccion
-      this.$router.push({name:nameRoute});
+      this.$router.push({ name: nameRoute });
     },
   },
   // watch: {},
