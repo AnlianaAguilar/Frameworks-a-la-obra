@@ -1,7 +1,7 @@
 <template>
-  
+  <div>
   <!--:headers=[]con info a mostrar, :items=La data -->
-  <v-container>  
+  <!-- <v-container>  
     <v-data-table
       :headers="headers"
       :items="pokemon" 
@@ -9,8 +9,28 @@
       class="elevation-1"
     ></v-data-table>
   </v-container>
-
-
+ -->
+  <v-container>
+     <v-card>
+    <v-card-title>
+      Pokémons
+      <v-spacer></v-spacer>
+      <v-text-field
+        v-model="search"
+        append-icon="mdi-magnify"
+        label="Search"
+        single-line
+        hide-details
+      ></v-text-field>
+    </v-card-title>
+    <v-data-table
+      :headers="headers"
+      :items="pokemon"
+      :search="search"
+    ></v-data-table>
+  </v-card>
+  </v-container>
+  </div>
 </template>
 
 <script>
@@ -331,6 +351,7 @@ export default {
           ],
         },
       ],
+      search:""
     };
   },
   // computed: {},

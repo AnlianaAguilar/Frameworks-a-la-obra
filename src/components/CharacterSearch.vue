@@ -20,8 +20,8 @@
         :key="pokemonCharacter.id"
       >
         <v-card class="mx-auto" max-width="344">
-          <v-img :src="pokemon.imagen" height="200px"></v-img>
-          <v-card-title>Pokémon: {{ pokemon.name }}</v-card-title>
+          <v-img :src="pokemonCharacter.imagen" height="200px"></v-img>
+          <v-card-title>Pokémon: {{ pokemonCharacter.name }}</v-card-title>
           <!-- modal -->
           <div class="text-center">
             <v-dialog v-model="dialog" width="50%">
@@ -62,7 +62,7 @@
                 <v-card-actions>
                   <v-spacer></v-spacer>
                   <v-btn color="primary" text @click="dialog = false">
-                    I accept
+                    Cerrar
                   </v-btn>
                 </v-card-actions>
               </v-card>
@@ -131,7 +131,7 @@ export default {
       this.pokemon.front_shiny = pokemonData.sprites.front_shiny;
       console.log(this.pokemon);
 
-      let myPokemon = JSON.parse(JSON.stringify(this.pokemon));
+      const myPokemon = JSON.parse(JSON.stringify(this.pokemon));
       this.pokemons.push(myPokemon);
     },
   },

@@ -3,7 +3,7 @@
     <v-app-bar color="grey darken-1" dark>
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Title</v-toolbar-title>
+      <v-toolbar-title>Pokémons</v-toolbar-title>
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" absolute temporary>
@@ -46,11 +46,6 @@ export default {
       group: null,
       routes: [
         // se crean para hacer redireccion programatica
-        {
-          icon: "mdi-home",
-          title: "Inicio",
-          name: "home",
-        },
         {
           icon: "mdi-magnify",
           title: "Busqueda",
